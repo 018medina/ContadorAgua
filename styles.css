@@ -8,6 +8,12 @@ body {
   background: #f0f0f0;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container {
   text-align: center;
   background: #fff;
@@ -67,4 +73,12 @@ h1 {
   width: 100%;
   text-align: center;
   top: -25px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
 }
