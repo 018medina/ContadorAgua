@@ -9,17 +9,24 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Contador de Copos de Água (450ml)</h1>
-    <div class="counter">
-      <button id="decreaseBtn">-</button>
-      <span id="count">0</span>
-      <button id="increaseBtn">+</button>
+  <div class="content">
+    <div class="container">
+      <input id="inputMl" type="number" placeholder="Insira quantos ml por copo">
+      <button type="button" onclick="setaMl()">OK</button>
+      <h1 id="Titulo">Contador de Copos de Água</h1>
+      <div class="counter">
+        <button id="decreaseBtn">-</button>
+        <span id="count">0</span>
+        <button id="increaseBtn">+</button>
+      </div>
+      <div class="progress">
+        <span id="progressText">0 de 12 copos</span>
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
     </div>
-    <div class="progress">
-      <span id="progressText">0 de 12 copos</span>
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
+    <footer>
+      Desenvolvido por Fábio Medina
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>
