@@ -1,7 +1,12 @@
 let count = localStorage.getItem("waterCount")
   ? parseInt(localStorage.getItem("waterCount"))
   : 0;
+let glass = localStorage.getItem("glassCount")
+  ? parseInt(localStorage.getItem("glassCount"))
+  : 0;
 const countElement = document.getElementById("count");
+const inputMl = document.getElementById("inputMl");
+const titulo = document.getElementById("Titulo");
 const progressText = document.getElementById("progressText");
 const progressBar = document.getElementById("progressBar");
 const increaseBtn = document.getElementById("increaseBtn");
@@ -23,8 +28,9 @@ decreaseBtn.addEventListener("click", () => {
 
 function updateCounter() {
   countElement.textContent = count;
+  titulo.textContent = `Contador de Copos de Água ${glass}ml`;
   progressText.textContent = `${count} de 12 copos - ${
-    (count * 450) / 1000
+    (count * parseFloat(glass)) / 1000
   } Litros`;
   progressBar.style.width = `${(count / 12) * 100}%`;
 
@@ -32,6 +38,16 @@ function updateCounter() {
   decreaseBtn.disabled = count === 0;
 
   localStorage.setItem("waterCount", count);
+}
+
+function setaMl() {
+  localStorage.setItem("glassCount", inputMl.value);
+  glass = inputMl.value;
+
+  titulo.textContent = `Contador de Copos de Água ${inputMl.value}ml`;
+  progressText.textContent = `${count} de 12 copos - ${
+    (count * parseFloat(inputMl.value)) / 1000
+  } Litros`;
 }
 
 updateCounter();
