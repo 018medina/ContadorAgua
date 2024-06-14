@@ -23,9 +23,9 @@ decreaseBtn.addEventListener("click", () => {
 
 function updateCounter() {
   countElement.textContent = count;
-  progressText.textContent = `${count} de 12 copos (${
+  progressText.textContent = `${count} de 12 copos ${
     (count * 450) / 1000
-  })Litros`;
+  }Litros`;
   progressBar.style.width = `${(count / 12) * 100}%`;
 
   increaseBtn.disabled = count === 12;
