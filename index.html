@@ -4,26 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3120890232938754" crossorigin="anonymous"></script>
-  <title>Contador de Copos de Água</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Contador de Copos d'Água</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-  <div class="content">
-    <div class="container">
-      <input id="inputMl" type="number" placeholder="Insira qtde ml por copo">
-      <button type="button" onclick="setaMl()">OK</button>
-      <h1 id="Titulo">Contador de Copos de Água</h1>
-      <div class="counter">
-        <button id="decreaseBtn">-</button>
-        <span id="count">0</span>
-        <button id="increaseBtn">+</button>
-      </div>
-      <div class="progress">
-        <span id="progressText">0 de 12 copos</span>
-        <div class="progress-bar" id="progressBar"></div>
-      </div>
+  <div class="container">
+    <input id="inputMl" type="number" placeholder="Insira qtde ml por copo">
+    <button type="button" onclick="setaMl()">OK</button>
+    <h1 id="Titulo">Contador de Copos d'Água</h1>
+    <div class="agua-container">
+      <button class="contadores" onclick="decrementCounter()">-</button>
+      <img id="aguaImage" src="agua1.png" alt="Água">
+      <button class="contadores" onclick="incrementCounter()">+</button>
+    </div>
+    <div class="counter">
+      <p>Copos: <span id="aguaCounter">0</span></p>
+    </div>
+    <div>
+      <button class="btnZerar" onclick="zeroCounter()">Zerar</button>
     </div>
     <footer>
       Desenvolvido por Fábio Medina
